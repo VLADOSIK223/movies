@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ movie.title }}{% endblock %}
+
+{% block body %}
+    <h1>{{ movie.title }}</h1>
+    <p>Год выпуска: {{ movie.year }}</p>
+    <p>{{ movie.description }}</p>
+{% endblock %}

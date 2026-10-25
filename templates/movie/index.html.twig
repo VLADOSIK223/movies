@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Список фильмов{% endblock %}
+
+{% block body %}
+    <h1>Каталог фильмов</h1>
+
+    <table border="1" cellpadding="8" cellspacing="0">
+        <tr>
+            <th>ID</th>
+            <th>Название</th>
+            <th>Год</th>
+        </tr>
+        {% for movie in movies %}
+            <tr>
+                <td>{{ movie.id }}</td>
+                <td>{{ movie.title }}</td>
+                <td>{{ movie.year }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
